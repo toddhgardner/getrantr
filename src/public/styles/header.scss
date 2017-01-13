@@ -1,0 +1,16 @@
+header {
+  height: $header-height;
+  width: 100%;
+  margin: 0;
+  position: fixed;
+  background-color: $color-complement-4;
+  color: white;
+  z-index: 2;
+
+  .titlebar {
+    padding: 10px 20px;
+    h1 {
+      margin: 0; padding: 0;
+    }
+  }
+}

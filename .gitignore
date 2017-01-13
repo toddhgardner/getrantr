@@ -1,0 +1,5 @@
+data
+node_modules
+
+# Built Assets
+src/public/index.css

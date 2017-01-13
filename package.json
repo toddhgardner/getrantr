@@ -1,0 +1,30 @@
+{
+  "name": "soliloquy2",
+  "version": "1.0.0",
+  "description": "JavaScript Demo Application",
+  "main": "public/index.html",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toddhgardner/soliloquy2.git"
+  },
+  "author": "Todd H Gardner <todd@trackjs.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/toddhgardner/soliloquy2/issues"
+  },
+  "homepage": "https://github.com/toddhgardner/soliloquy2#readme",
+  "dependencies": {
+    "body-parser": "1.15.2",
+    "express": "4.14.0",
+    "nedb": "1.8.0"
+  },
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "gulp-include": "2.3.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-sass": "3.1.0"
+  }
+}

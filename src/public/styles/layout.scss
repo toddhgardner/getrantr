@@ -1,0 +1,19 @@
+.col {
+  float: left;
+  margin-top: $header-height;
+  margin-bottom: $spacing-unit;
+  padding-right: $spacing-unit;
+
+  &.col-1 {
+    width: 200px;
+  }
+
+  &.col-2 {
+    width: calc(60% - 230px + (#{$spacing-unit} * 2));
+  }
+
+  &.col-3 {
+    width: calc(40% - 230px + (#{$spacing-unit} * 2));
+  }
+
+}

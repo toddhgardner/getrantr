@@ -1,0 +1,45 @@
+
+$text-color: #111;
+$text-color-weak: #828282;
+$background-color: #fdfdfd;
+
+$color-primary-0: #FFDEA8;	// Main Primary color */
+$color-primary-1: #FFF2DD;
+$color-primary-2: #FFE9C4;
+$color-primary-3: #ECC480;
+$color-primary-4: #CFA156;
+
+$color-secondary-1-0: #86CB8F;	// Main Secondary color (1) */
+$color-secondary-1-1: #CAEACE;
+$color-secondary-1-2: #A9DCAF;
+$color-secondary-1-3: #63B76D;
+$color-secondary-1-4: #43A04E;
+
+$color-secondary-2-0: #FFACA8;	// Main Secondary color (2) */
+$color-secondary-2-1: #FFDEDD;
+$color-secondary-2-2: #FFC7C4;
+$color-secondary-2-3: #EC8580;
+$color-secondary-2-4: #CF5C56;
+
+$color-complement-0: #7991B0;	// Main Complement color */
+$color-complement-1: #C3CFDE;
+$color-complement-2: #9FB0C9;
+$color-complement-3: #5A769C;
+$color-complement-4: #3F5E88;
+
+$base-font-family: 'Open Sans', sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.2;
+$spacing-unit:   30px;
+$header-height: 60px;
+
+
+@import 'base';
+@import 'layout';
+@import 'typography';
+@import 'header';
+@import 'profile';
+@import 'timeline';
+@import 'ads';
