@@ -15,6 +15,7 @@ var RantView = Backbone.View.extend({
   },
 
   initialize: function() {
+    this.model.on('change', this.render, this);
     this.$el.on('click', function(evt) {
       if (evt.target.matches('.js-delete')) {
         this.onDelete(evt);

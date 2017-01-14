@@ -16,12 +16,17 @@ module.exports = (app, db) => {
   });
 
   app.post(baseURL, jsonParser, (req, res, next) => {
+    var text = (req.body || {}).text;
+    if (!text) {
+      res.status(400).json({ message: 'text must not be empty' });
+      return next();
+    }
     db.users
       .find({})
       .limit(1)
       .exec((err, user) => {
         var rant = {
-          text: (req.body || {}).text,
+          text: text,
           timestamp: new Date().toISOString(),
           name: user[0].name,
           imageURL: user[0].imageURL

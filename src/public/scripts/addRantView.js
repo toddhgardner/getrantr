@@ -10,7 +10,7 @@ var AddRantView = Backbone.View.extend({
 
     this.collection.create({
       text: form.rant.value
-    });
+    }, { wait: true });
 
     form.rant.value = '';
   }
