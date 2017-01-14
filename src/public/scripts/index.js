@@ -5,7 +5,7 @@
 
   var ads = new AdCollection();
   var rants = new RantCollection();
-  var user = new UserModel();
+  rants.user = new UserModel();
 
   var adList = new AdListView({
     el: $('#ads'),
@@ -14,13 +14,12 @@
 
   var userView = new UserView({
     el: $('#user'),
-    model: user
+    model: rants.user
   });
 
   var addRant = new AddRantView({
     el: $('#add-rant'),
-    collection: rants,
-    user: user
+    collection: rants
   });
 
   var timeline = new RantListView({
@@ -29,7 +28,7 @@
   });
 
   ads.startRotation();
-  user.fetch();
+  rants.user.fetch();
   rants.fetch();
 
 })();

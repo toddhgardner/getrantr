@@ -1,6 +1,7 @@
 {
   "globals": {
     "$": true,
-    "Backbone": true
+    "Backbone": true,
+    "moment": true
   }
 }

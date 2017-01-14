@@ -6,7 +6,7 @@ var AdView = Backbone.View.extend({
 
   template: function(ad) {
     return `<div class="ad clearfix">
-              <a href="${ad.targetURL}" target="_blank">
+              <a href="${ad.targetURL}" target="_blank" data-advertiserId="${ad.advertiserId}">
                 <img src="${ad.imageURL}" />
               </a>
               <a href="javascript:void(0);" class="js-hide-ad text-sm pull-right">Close</a>
@@ -19,6 +19,10 @@ var AdView = Backbone.View.extend({
 
   render: function() {
     this.$el.html(this.template(this.model.toJSON()));
+    var m = this.model;
+    this.$('a').on('click', function() {
+      recordClickAnalytics(m);
+    });
     return this;
   },
 
@@ -52,3 +56,8 @@ var AdListView = Backbone.View.extend({
   }
 
 });
+
+
+function recordClickAnalytics() {
+  // not really important...
+}
