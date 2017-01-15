@@ -29,6 +29,7 @@ var AdView = Backbone.View.extend({
   onHideAd: function(evt) {
     evt.preventDefault();
 
+    console.log('Haha, yea right, like I\'m going to let you get away that easy.');
     this.model.destroy();
     this.remove();
   }

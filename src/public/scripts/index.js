@@ -3,6 +3,8 @@
 (function() {
   'use strict';
 
+  console.log('I feel a rant coming on.');
+
   var ads = new AdCollection();
   var rants = new RantCollection();
   rants.user = new UserModel();

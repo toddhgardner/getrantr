@@ -29,6 +29,7 @@ var RantView = Backbone.View.extend({
   },
 
   onDelete: function() {
+    console.log('I told you that you\'d regret it. But does anyone listen to me? No, I\'m just a hyper-intelligent JavaScript computer. Brain the size of a planet.');
     setTimeout(function() {
       this.model.destroy();
       this.remove();

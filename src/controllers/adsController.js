@@ -1,20 +1,16 @@
 var ADS = [
   {
     advertiserId: 'REPLACE_ME',
-    imageURL: '/images/ad-bacon.jpg',
-    targetURL: 'http://www.baconfreak.com/'
+    imageURL: '/images/ad-russia.jpg',
+    targetURL: 'https://www.travelallrussia.com/'
   }, {
     advertiserId: 'REPLACE_ME',
-    imageURL: '/images/ad-dundee.png',
-    targetURL: 'https://www.youtube.com/watch?v=POJtaO2xB_o'
+    imageURL: '/images/ad-goldbathroom.jpg',
+    targetURL: 'http://www.houzz.com/gold-bathroom'
   }, {
     advertiserId: 'REPLACE_ME',
-    imageURL: '/images/ad-bear.jpeg',
-    targetURL: 'http://www.bear.org/website/'
-  }, {
-    advertiserId: 'REPLACE_ME',
-    imageURL: '/images/ad-hasslehoff.png',
-    targetURL: 'http://davidhasselhoffonline.com/bear'
+    imageURL: '/images/ad-hair.jpg',
+    targetURL: 'http://www.hairclub.com/'
   }
 ];
 
