@@ -3,6 +3,7 @@ var express = require('express');
 
 var app = express();
 var db = {};
+db.ads = new Datastore({ filename: './data/ads.db', autoload: true });
 db.users = new Datastore({ filename: './data/users.db', autoload: true });
 db.rants = new Datastore({ filename: './data/rants.db', autoload: true });
 

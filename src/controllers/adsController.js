@@ -1,18 +1,3 @@
-var ADS = [
-  {
-    advertiserId: 'REPLACE_ME',
-    imageURL: '/images/ad-russia.jpg',
-    targetURL: 'https://www.travelallrussia.com/'
-  }, {
-    advertiserId: 'REPLACE_ME',
-    imageURL: '/images/ad-goldbathroom.jpg',
-    targetURL: 'http://www.houzz.com/gold-bathroom'
-  }, {
-    advertiserId: 'REPLACE_ME',
-    imageURL: '/images/ad-hair.jpg',
-    targetURL: 'http://www.hairclub.com/'
-  }
-];
 
 var ID_CHARS = '23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz';
 function getAdvertiserId() {
@@ -23,18 +8,38 @@ function getAdvertiserId() {
   return res;
 }
 
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
 module.exports = (app, db) => {
 
   app.get('/api/ads', (req, res, next) => {
-    var result = [];
-    for (var i = 0; i < 5; i++) {
-      var ad = ADS[Math.floor(Math.random() * ADS.length)];
-      ad.advertiserId = getAdvertiserId();
-      result.push(ad);
-    }
-
-    res.json(result);
-    next();
+    db.ads
+      .find({})
+      .exec((err, docs) => {
+        for (var i = 0; i < docs.length; i++) {
+          docs[i].advertiserId = getAdvertiserId();
+        }
+        var ads = shuffle(docs);
+        res.json(ads);
+        next();
+      });
   });
 
 };
