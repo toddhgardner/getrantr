@@ -1,11 +1,11 @@
 var AddRantView = Backbone.View.extend({
 
   events: {
-    'submit': 'onSubmit',
-    'keyup textarea': 'onChange'
+    'submit': 'onSubmit'
   },
 
   initialize: function() {
+    this.$('textarea').on('keyup', this.onChange);
     var text = localStorage.getItem('next-rant');
     if (text) {
       this.$('textarea').val(text);
