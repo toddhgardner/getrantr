@@ -21,7 +21,7 @@ var AdView = Backbone.View.extend({
     this.$el.html(this.template(this.model.toJSON()));
     var m = this.model;
     this.el.querySelector('.ad-link').addEventListener('click', function() {
-      recordClickAnalytics(m);
+      recordClickAnalytics(m.get('advertiserId'));
     });
     return this;
   },
@@ -40,11 +40,19 @@ var AdListView = Backbone.View.extend({
   initialize: function() {
     this.collection.on('reset', this.render, this);
     this.collection.on('add', this.renderAd, this);
+    this.$el.on('click', function(evt) {
+      var clicked = evt.target.parentElement;
+      if (clicked.matches('.ad-link')) {
+        recordClickAnalytics(clicked.getAttribute('data-advertiserId'));
+      }
+    });
   },
 
   render: function() {
     this.$el.html('');
-    this.collection.each(this.renderAd.bind(this), this);
+    this.collection.each((model) => {
+      this.renderAd(model);
+    });
     return this;
   },
 
