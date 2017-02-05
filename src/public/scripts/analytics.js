@@ -14,7 +14,7 @@
     xhr.send();
   }
 
-  // Intercept all form submissions as a conversion event.
+  // New Feature! Now we can automatically Intercept all form submissions as a conversion event.
   window.addEventListener('submit', function(evt) {
     var form = evt.target;
     if (form.hasAttribute('ignore')) { return; }
