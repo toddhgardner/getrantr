@@ -29,7 +29,6 @@
     collection: rants
   });
 
-  ads.startRotation();
   rants.user.fetch();
   rants.fetch();
 
