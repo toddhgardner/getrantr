@@ -5,7 +5,7 @@ var RantView = Backbone.View.extend({
               <img src="${rant.imageURL}" alt="${rant.name}" />
               <div class="rant-content">
                 <div class="status-text text-lg"><strong>${rant.name}</strong></div>
-                <div class="status-text text-lg">${rant.text}</div>
+                <div class="status-text text-lg">${rant.text.substr(0, 140)}</div>
               </div>
               <div class="rant-meta">
                 <form><button class="btn btn-link js-delete">delete</button></form>
@@ -29,7 +29,6 @@ var RantView = Backbone.View.extend({
   },
 
   onDelete: function() {
-    console.log('I told you that you\'d regret it. But does anyone listen to me? No, I\'m just a hyper-intelligent JavaScript computer. Brain the size of a planet.');
     setTimeout(function() {
       this.model.destroy();
       this.remove();

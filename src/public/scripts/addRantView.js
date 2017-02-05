@@ -22,8 +22,8 @@ var AddRantView = Backbone.View.extend({
   onSubmit: function(evt) {
     evt.preventDefault();
     var form = evt.target;
-    console.log('I hope you don\'t regret posting that later.');
 
+    analytics.trackConversion();
     this.collection.create({
       text: form.rant.value
     }, { wait: true });

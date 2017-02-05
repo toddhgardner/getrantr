@@ -1,9 +1,9 @@
-var gulp = require('gulp');
+var gulp    = require('gulp');
 var nodemon = require('gulp-nodemon');
-var fs = require('fs');
+var fs      = require('fs');
 
-fs.readdirSync('./build').forEach(function(file) {
-  require('./build/' + file);
+fs.readdirSync('./build/tasks').forEach(function(file) {
+  require('./build/tasks/' + file);
 });
 
 gulp.task('start', function() {

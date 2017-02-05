@@ -149,19 +149,19 @@ module.exports = (app, db) => {
     rants.push({
       name: user.name,
       imageURL: user.imageURL,
-      text: 'Congressman John Lewis should spend more time on fixing and helping his district, which is in horrible shape and falling apart (not to......',
+      text: 'What is our country coming to when a judge can halt a Homeland Security travel ban and anyone, even with bad intentions, can come into U.S.?',
       timestamp: new Date((new Date()) * 1 - 1000 * 3600 * 2).toISOString()
     });
     rants.push({
       name: user.name,
       imageURL: user.imageURL,
-      text: 'The "Unaffordable" Care Act will soon be history!',
+      text: 'MAKE AMERICA GREAT AGAIN!',
       timestamp: new Date((new Date()) * 1 - 1000 * 3600 * 4).toISOString()
     });
     rants.push({
       name: user.name,
       imageURL: user.imageURL,
-      text: 'released by "Intelligence" even knowing there is no proof, and never will be. My people will have a full report on hacking within 90 days!',
+      text: 'The opinion of this so-called judge, which essentially takes law-enforcement away from our country, is ridiculous and will be overturned!',
       timestamp: new Date((new Date()) * 1 - 1000 * 3600 * 6).toISOString()
     });
     rants.push({
@@ -261,6 +261,78 @@ module.exports = (app, db) => {
             db.users.remove({}, { multi: true }, () => {
               db.users.insert(user, () => {
                 res.json({ message: 'loaded customer 2' });
+                next();
+              });
+            });
+          });
+        });
+      });
+    });
+
+  });
+
+  app.get('/api/customers/3', (req, res, next) => {
+    var user = {
+      name: 'AltTodd',
+      imageURL: '/images/profile1a.jpg',
+      joinedOn: null
+    };
+
+    var rants = [];
+    rants.push({
+      name: user.name,
+      imageURL: user.imageURL,
+      text: null,
+      timestamp: new Date((new Date()) * 1 - 1000 * 3600 * 2).toISOString()
+    });
+    rants.push({
+      name: user.name,
+      imageURL: user.imageURL,
+      text: null,
+      timestamp: new Date((new Date()) * 1 - 1000 * 3600 * 4).toISOString()
+    });
+    rants.push({
+      name: user.name,
+      imageURL: user.imageURL,
+      text: null,
+      timestamp: new Date((new Date()) * 1 - 1000 * 3600 * 6).toISOString()
+    });
+    rants.push({
+      name: user.name,
+      imageURL: user.imageURL,
+      text: null,
+      timestamp: new Date((new Date()) * 1 - 1000 * 3600 * 10).toISOString()
+    });
+
+    var ads = [];
+    ads.push({
+      advertiserId: 'REPLACE_ME',
+      imageURL: '/images/ad-bacon.jpg',
+      targetURL: 'http://www.baconfreak.com/'
+    });
+    ads.push({
+      advertiserId: 'REPLACE_ME',
+      imageURL: '/images/ad-dundee.png',
+      targetURL: 'https://www.youtube.com/watch?v=POJtaO2xB_o'
+    });
+    ads.push({
+      advertiserId: 'REPLACE_ME',
+      imageURL: '/images/ad-bear.jpeg',
+      targetURL: 'http://www.bear.org/website/'
+    });
+    ads.push({
+      advertiserId: 'REPLACE_ME',
+      imageURL: '/images/ad-hasslehoff.png',
+      targetURL: 'http://davidhasselhoffonline.com/bear'
+    });
+
+    db.rants.remove({}, { multi: true }, () => {
+      db.rants.insert(rants, () => {
+        db.ads.remove({}, { multi: true }, () => {
+          db.ads.insert(ads, () => {
+            db.users.remove({}, { multi: true }, () => {
+              db.users.insert(user, () => {
+                res.json({ message: 'loaded customer 3' });
                 next();
               });
             });

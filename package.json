@@ -22,9 +22,17 @@
     "nedb": "1.8.0"
   },
   "devDependencies": {
+    "dns": "0.2.2",
     "gulp": "3.9.1",
     "gulp-include": "2.3.1",
-    "gulp-nodemon": "^2.2.1",
-    "gulp-sass": "3.1.0"
+    "gulp-nodemon": "2.2.1",
+    "gulp-sass": "3.1.0",
+    "gulp-util": "3.0.8",
+    "gulp-webdriver": "2.0.3",
+    "mkdirp": "0.5.1",
+    "selenium-standalone": "6.0.1",
+    "wdio-jasmine-framework": "0.2.19",
+    "wdio-spec-reporter": "0.0.5",
+    "webdriverio": "4.6.2"
   }
 }

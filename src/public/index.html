@@ -21,7 +21,7 @@
 
   <div class="col col-2">
     <div id="add-rant">
-      <form target="/api/rant" method="post">
+      <form target="/api/rant" method="post" ignore>
         <label for="rant_text">What has you on a soapbox today?</label>
         <textarea id="rant_text" name="rant" placeholder="Well, actually..."></textarea>
         <div class="controls pull-right">
@@ -36,21 +36,28 @@
     <div id="ads"></div>
   </div>
 
-  <script type="text/javascript" src="/vendor/jquery.js"></script>
-  <script type="text/javascript" src="/vendor/lodash.js"></script>
-  <script type="text/javascript" src="/vendor/backbone.js"></script>
-  <script type="text/javascript" src="/vendor/moment.js"></script>
+  <!-- BEGIN TRACKJS -->
+  <script type="text/javascript">window._trackJs = { token: 'GETRANTR' };</script>
+  <script type="text/javascript" src="https://cdn.trackjs.com/releases/canary/tracker.js"></script>
+  <!-- END TRACKJS -->
 
-  <script type="text/javascript" src="/scripts/adModel.js"></script>
-  <script type="text/javascript" src="/scripts/rantModel.js"></script>
-  <script type="text/javascript" src="/scripts/userModel.js"></script>
+  <script type="text/javascript" src="http://cdn.getrantr.io:9000/scripts/analytics.js"></script>
 
-  <script type="text/javascript" src="/scripts/adListView.js"></script>
-  <script type="text/javascript" src="/scripts/userView.js"></script>
-  <script type="text/javascript" src="/scripts/addRantView.js"></script>
-  <script type="text/javascript" src="/scripts/rantListView.js"></script>
+  <script type="text/javascript" src="http://cdn.getrantr.io:9000/vendor/jquery.js"></script>
+  <script type="text/javascript" src="http://cdn.getrantr.io:9000/vendor/lodash.js"></script>
+  <script type="text/javascript" src="http://cdn.getrantr.io:9000/vendor/backbone.js"></script>
+  <script type="text/javascript" src="http://cdn.getrantr.io:9000/vendor/moment.js"></script>
 
-  <script type="text/javascript" src="/scripts/index.js"></script>
+  <script type="text/javascript" src="http://cdn.getrantr.io:9000/scripts/adModel.js"></script>
+  <script type="text/javascript" src="http://cdn.getrantr.io:9000/scripts/rantModel.js"></script>
+  <script type="text/javascript" src="http://cdn.getrantr.io:9000/scripts/userModel.js"></script>
+
+  <script type="text/javascript" src="http://cdn.getrantr.io:9000/scripts/adListView.js"></script>
+  <script type="text/javascript" src="http://cdn.getrantr.io:9000/scripts/userView.js"></script>
+  <script type="text/javascript" src="http://cdn.getrantr.io:9000/scripts/addRantView.js"></script>
+  <script type="text/javascript" src="http://cdn.getrantr.io:9000/scripts/rantListView.js"></script>
+
+  <script type="text/javascript" src="http://cdn.getrantr.io:9000/scripts/index.js"></script>
 
 </body>
 </html>

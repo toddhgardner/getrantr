@@ -6,7 +6,7 @@ var AdView = Backbone.View.extend({
 
   template: function(ad) {
     return `<div class="ad clearfix">
-              <a href="${ad.targetURL}" target="_blank" data-advertiserId="${ad.advertiserId}">
+              <a class="ad-link" href="${ad.targetURL}" target="_blank" data-advertiserId="${ad.advertiserId}">
                 <img src="${ad.imageURL}" />
               </a>
               <a href="javascript:void(0);" class="js-hide-ad text-sm pull-right">Close</a>
@@ -20,7 +20,7 @@ var AdView = Backbone.View.extend({
   render: function() {
     this.$el.html(this.template(this.model.toJSON()));
     var m = this.model;
-    this.$('a').on('click', function() {
+    this.el.querySelector('.ad-link').addEventListener('click', function() {
       recordClickAnalytics(m);
     });
     return this;
@@ -29,7 +29,6 @@ var AdView = Backbone.View.extend({
   onHideAd: function(evt) {
     evt.preventDefault();
 
-    console.log('Haha, yea right, like I\'m going to let you get away that easy.');
     this.model.destroy();
     this.remove();
   }
