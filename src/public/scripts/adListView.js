@@ -40,12 +40,6 @@ var AdListView = Backbone.View.extend({
   initialize: function() {
     this.collection.on('reset', this.render, this);
     this.collection.on('add', this.renderAd, this);
-    this.$el.on('click', function(evt) {
-      var clicked = evt.target.parentElement;
-      if (clicked.matches('.ad-link')) {
-        recordClickAnalytics(clicked.getAttribute('data-advertiserId'));
-      }
-    });
   },
 
   render: function() {
