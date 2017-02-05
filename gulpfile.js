@@ -10,7 +10,7 @@ gulp.task('start', function() {
   nodemon({
     script: 'src/index.js',
     tasks: ['js', 'sass'],
-    ext: 'html scss',
+    ext: 'js html scss',
     env: { 'NODE_ENV': 'development' }
   });
 });
