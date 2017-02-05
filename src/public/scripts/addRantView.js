@@ -1,11 +1,8 @@
 var AddRantView = Backbone.View.extend({
 
-  events: {
-    'submit': 'onSubmit'
-  },
-
   initialize: function() {
-    this.$('textarea').on('keyup', this.onChange);
+    this.$('textarea').on('keyup', this.onChange.bind(this));
+    this.$('form').on('submit', this.onSubmit.bind(this));
     var text = localStorage.getItem('next-rant');
     if (text) {
       this.$('textarea').val(text);
@@ -22,11 +19,12 @@ var AddRantView = Backbone.View.extend({
   onSubmit: function(evt) {
     evt.preventDefault();
     var form = evt.target;
+    var rant = {
+      text: form.rant.value
+    };
 
     analytics.trackConversion();
-    this.collection.create({
-      text: form.rant.value
-    }, { wait: true });
+    this.collection.create(rant, { wait: true });
 
     form.rant.value = '';
   }
