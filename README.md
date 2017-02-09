@@ -14,7 +14,7 @@ npm install
 You'll also need the following entries in your `hosts` file:
 
 ```
-127.0.0.1   gentrantr.io
+127.0.0.1   getrantr.io
 127.0.0.1   cdn.getrantr.io
 ```
 
