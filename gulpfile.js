@@ -6,7 +6,7 @@ fs.readdirSync('./build/tasks').forEach(function(file) {
   require('./build/tasks/' + file);
 });
 
-gulp.task('start', function() {
+gulp.task('start', ['js', 'sass'], function() {
   nodemon({
     script: 'src/index.js',
     tasks: ['js', 'sass'],
