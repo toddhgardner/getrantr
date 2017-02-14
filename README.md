@@ -46,6 +46,19 @@ gulp start
 
 This will run getRANTR at `http://getRANTR.io:9000/` and will setup to automatically reload if any of the source files are changed.
 
+### Repository Structure
+
+```
+/build          Automation and build tasks
+/data           Data location for getRANTR users
+/exercises      Guides and help for workshop exercises
+/node_modules   There be dragons here
+/src            Source code
+  /controllers  Server API actions
+  /public       Client-side application (this is probably what you are looking for)
+/test           Source code tests
+```
+
 ### Impersonating Users
 
 There are three example users loaded into the system. You can impersonate them by visiting the following URLs in your browser:
