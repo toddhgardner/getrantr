@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<?charles serialisation-version='2.0' ?>
+<throttling>
+  <bandwidthDown>16384.0</bandwidthDown>
+  <bandwidthUp>8192.0</bandwidthUp>
+  <utilisationDown>100</utilisationDown>
+  <utilisationUp>100</utilisationUp>
+  <latency>500</latency>
+  <reliability>99</reliability>
+  <mtu>576</mtu>
+  <lowQuality>100</lowQuality>
+  <highQuality>100</highQuality>
+  <stability>99</stability>
+  <customPresets>
+    <throttlePreset>
+      <bandwidthDown>16384.0</bandwidthDown>
+      <bandwidthUp>8192.0</bandwidthUp>
+      <utilisationDown>100</utilisationDown>
+      <utilisationUp>100</utilisationUp>
+      <latency>500</latency>
+      <mtu>576</mtu>
+      <reliability>99</reliability>
+      <stability>99</stability>
+      <lowQuality>100</lowQuality>
+      <highQuality>100</highQuality>
+      <name>3G on the Subway</name>
+    </throttlePreset>
+  </customPresets>
+  <hosts class="listAdapter">
+    <list/>
+  </hosts>
+  <selectedHosts>false</selectedHosts>
+</throttling>

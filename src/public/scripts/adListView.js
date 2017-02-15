@@ -55,5 +55,5 @@ var AdListView = Backbone.View.extend({
 
 
 function recordClickAnalytics() {
-  // not really important...
+  console.log('someone clicked on an ad!!');
 }

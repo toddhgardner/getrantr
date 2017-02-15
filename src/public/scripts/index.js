@@ -1,6 +1,6 @@
 /* global AdCollection, AdListView, AddRantView, RantCollection, RantListView, UserModel, UserView */
 
-(function() {
+$(function() {
   'use strict';
 
   console.log('I feel a rant coming on.');
@@ -34,4 +34,4 @@
 
   s
 
-})();
+});
