@@ -18,15 +18,6 @@ You may also need the following tools to enhance or debug getRANTR:
 - [Chrome](https://www.google.com/chrome/) web browser
 - [Charles](https://www.charlesproxy.com/) or [Fiddler](http://www.telerik.com/fiddler) web proxy
 
-### Hosts file
-
-For best results, add the following entries to your `hosts` file (usually located at `/etc/hosts`):
-
-```
-127.0.0.1   getrantr.io
-127.0.0.1   cdn.getrantr.io
-```
-
 ### Installation
 
 getRANTR uses [gulp](http://gulpjs.com/) to handle installation and build automation. You'll want to have it installed globally in your **Node** packages. You'll also need to install all the local dependencies for running getRANTR:
@@ -41,10 +32,10 @@ npm install
 After setting everything up and installing the dependencies, you can run getRANTR by:
 
 ```
-gulp start
+npm start
 ```
 
-This will run getRANTR at `http://getRANTR.io:9000/` and will setup to automatically reload if any of the source files are changed.
+This will run getRANTR at `http://www.getRANTR.com:9000/` and will setup to automatically reload if any of the source files are changed.
 
 ### Repository Structure
 
@@ -61,12 +52,14 @@ This will run getRANTR at `http://getRANTR.io:9000/` and will setup to automatic
 
 ### Impersonating Users
 
-There are three example users loaded into the system. You can impersonate them by visiting the following URLs in your browser:
+There are three example users loaded into the system. You can impersonate them with the following commands:
 
-- http://getRANTR.io:9000/api/customers/1 Will impersonate Todd's default account
-- http://getRANTR.io:9000/api/customers/2 Will impersonate the Keystone user account
-- http://getRANTR.io:9000/api/customers/3 Will impersonate Todd's alt account
+```
+node import 1   # Will impersonate Todd's default account
+node import 2   # Will impersonate the Keystone user account
+node import 3   # Will impersonate Todd's alt account
+```
 
-You'll need to pick one of these users when you first get started.
+Todd's default account is loaded automatically when you install.
 
 Happy Ranting!

@@ -1,12 +1,12 @@
-describe('getRANTr.io', () => {
+describe('getRANTr', () => {
 
   // Smoke test case
   it('has correct page title', () => {
     return browser
-      .url('http://getRANTr.io:9000/')
+      .url('http://www.getRANTr.com:9000/')
       .getTitle()
       .then((title) => {
-        expect(title).toBe('getRANTr.io');
+        expect(title).toBe('getRANTr');
       });
   });
 

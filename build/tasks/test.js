@@ -7,6 +7,8 @@ var selenium  = require('selenium-standalone');
 
 var BASE_PATH = path.resolve(__dirname, '../..');
 
+gulp.task('test', ['build', 'test:e2e']);
+
 gulp.task('selenium', (done) => {
   mkdirp(BASE_PATH + '/log', (err) => {
     if (err) { gutil.log(gutil.colors.red(err)); return done(err); }
@@ -33,7 +35,7 @@ gulp.task('selenium', (done) => {
   });
 });
 
-gulp.task('test:e2e', ['test-env-check', 'test-server', 'selenium'], () => {
+gulp.task('test:e2e', ['test-server', 'selenium'], () => {
   return gulp.src(BASE_PATH + '/build/config/wdio.conf.js')
     .pipe(webdriver())
     .on('end', () => { selenium._process.kill(); process.exit(); })

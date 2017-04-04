@@ -9,7 +9,7 @@
         <locationMatch>
           <location>
             <protocol>http</protocol>
-            <host>cdn.getrantr.io</host>
+            <host>cdn.getrantr.com</host>
             <port>9000</port>
             <path>/scripts/analytics.js</path>
           </location>

@@ -8,13 +8,12 @@ db.users = new Datastore({ filename: './data/users.db', autoload: true });
 db.rants = new Datastore({ filename: './data/rants.db', autoload: true });
 
 // app.use(function(req, res, next) {
-//   res.header('Access-Control-Allow-Origin', 'http://getrantr.io:9000');
+//   res.header('Access-Control-Allow-Origin', 'http://www.getrantr.com:9000');
 //   next();
 // });
 
 require('./controllers/adsController.js')(app, db);
 require('./controllers/analyticsController.js')(app, db);
-require('./controllers/customersController.js')(app, db);
 require('./controllers/rantsController.js')(app, db);
 require('./controllers/usersController.js')(app, db);
 

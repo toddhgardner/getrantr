@@ -6,10 +6,10 @@ fs.readdirSync('./build/tasks').forEach(function(file) {
   require('./build/tasks/' + file);
 });
 
-gulp.task('start', ['js', 'sass'], function() {
+gulp.task('start', ['build'], function() {
   nodemon({
     script: 'src/index.js',
-    tasks: ['js', 'sass'],
+    tasks: ['build'],
     ext: 'js html scss',
     env: { 'NODE_ENV': 'development' }
   });

@@ -1,6 +1,8 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 
+gulp.task('build', ['js', 'sass']);
+
 gulp.task('js', () => {});
 
 gulp.task('sass', () => {

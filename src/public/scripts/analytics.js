@@ -5,7 +5,7 @@
 
   function trackConversion(callback) {
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://getrantr.io:9000/api/analytics/conversion');
+    xhr.open('GET', 'http://www.getrantr.com:9000/api/analytics/conversion');
     xhr.addEventListener('readystatechange', function() {
       if (xhr.readyState === 4) {
         if (callback) callback();

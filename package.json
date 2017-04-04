@@ -1,9 +1,11 @@
 {
-  "name": "soliloquy2",
-  "version": "1.0.0",
-  "description": "JavaScript Demo Application",
+  "name": "getRANTr",
+  "version": "2.0.0",
+  "description": "JavaScript Debugging Playground",
   "main": "public/index.html",
   "scripts": {
+    "postinstall": "node import todd",
+    "start": "gulp start",
     "test": "gulp test"
   },
   "repository": {
@@ -13,9 +15,9 @@
   "author": "Todd H Gardner <todd@trackjs.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/toddhgardner/soliloquy2/issues"
+    "url": "https://github.com/toddhgardner/getRANTr/issues"
   },
-  "homepage": "https://github.com/toddhgardner/soliloquy2#readme",
+  "homepage": "https://github.com/toddhgardner/getRANTr#readme",
   "dependencies": {
     "body-parser": "1.15.2",
     "express": "4.14.0",
