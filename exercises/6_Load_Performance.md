@@ -1,12 +1,14 @@
-Exercise 7 - Load Performance
+Exercise 6 - Load Performance
 ================
 
 # Goal
-Locate the sources with the biggest impact on load performance
+Locate 3 sources with impact on load performance
 
 
 # Evidence
 - Users report the site is slow to load.
+- Simulate with Network Throttle: Chrome > Network > Throttle > Good 3G
+- Run Timeline: Network, Screenshots, Memory
 
 
 # Concepts
@@ -18,11 +20,16 @@ Locate the sources with the biggest impact on load performance
 
 
 
+
+
+
 # Spoilers (Try Yourself First)
 
-## Key Files
+## Key Indicators
 
+- `/src/public/index.html` Blocks for fonts from Google API
 - `/src/public/index.html` Loads lots of scripts independently
+- `/src/public/scripts/*` Are not compressed or cached
 - `/src/public/images/*` Are way to big for what they need to be
 
 ## Solution Links

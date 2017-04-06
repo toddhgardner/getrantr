@@ -1,4 +1,4 @@
-Exercise 3 - Clear Rant Text
+Exercise 2 - Clear Rant Text
 ================
 
 # Goal
@@ -28,6 +28,15 @@ Page should clear draft rant text when cleared.
 ## Key Files
 
 - `/src/public/scripts/addRantView.js:onChange()` Empty text value will be falsy
+
+```
+onChange: function(evt) {
+  var text = (evt.target || {}).value;
+  if (typeof text === 'string') { // <-- Change this to check for string
+    localStorage.setItem('next-rant', text);
+  }
+},
+```
 
 ## Solution Links
 
