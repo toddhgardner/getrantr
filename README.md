@@ -20,7 +20,7 @@ You may also need the following tools to enhance or debug getRANTR:
 
 ### Installation
 
-getRANTR uses [gulp](http://gulpjs.com/) to handle installation and build automation. You'll want to have it installed globally in your **Node** packages. You'll also need to install all the local dependencies for running getRANTR:
+getRANTR uses [gulp](http://gulpjs.com/) to handle installation and build automation. You'll want to have it installed globally in your **Node** packages. You'll also need to install all the local dependencies, **in the same directory as getRANTR** for running getRANTR:
 
 ```
 npm install gulp --global
@@ -52,7 +52,7 @@ This will run getRANTR at `http://www.getRANTR.com:9000/` and will setup to auto
 
 ### Impersonating Users
 
-There are three example users loaded into the system. You can impersonate them with the following commands:
+There are three example users loaded into the system. You can impersonate them with the following commands, after closing the node session (`control` and `C` on Mac):
 
 ```
 node import 1   # Will impersonate Todd's default account
