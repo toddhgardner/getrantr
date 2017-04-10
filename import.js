@@ -25,6 +25,7 @@ switch (process.argv[2]) {
     importAltTodd(db, () => {
       console.log('Imported User 3 (Alt Todd)');
     });
+    break;
 
   default:
     console.warn(`Invalid import ${process.argv[2]}`);
