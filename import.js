@@ -49,13 +49,13 @@ function importTodd(db, callback) {
   rants.push({
     name: user.name,
     imageURL: user.imageURL,
-    text: 'The year is 2017. Donald J. Trump is President. The primary resistance leaders are Teen Vogue and the Merriam-Webster online dictionary.',
+    text: 'Talk idea: "What If We\'ve Made a Horrible Mistake? JavaScript Without NPM, Webpack, or React."',
     timestamp: new Date((new Date()) * 1 - 1000 * 3600 * 4).toISOString()
   });
   rants.push({
     name: user.name,
     imageURL: user.imageURL,
-    text: 'That thing where you buy some domains for a crazy idea...',
+    text: 'A hard lesson that hits me over and over again: if you want to build software that lasts, aggressively remove dependencies.',
     timestamp: new Date((new Date()) * 1 - 1000 * 3600 * 6).toISOString()
   });
   rants.push({
