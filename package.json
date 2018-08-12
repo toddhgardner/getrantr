@@ -4,6 +4,7 @@
   "description": "JavaScript Debugging Playground",
   "main": "public/index.html",
   "scripts": {
+    "nuke": "rimraf node_modules & npm install",
     "postinstall": "node import todd",
     "start": "gulp start"
   },
@@ -32,6 +33,7 @@
     "gulp-nodemon": "2.2.1",
     "gulp-sass": "4.0.1",
     "gulp-util": "3.0.8",
-    "mkdirp": "0.5.1"
+    "mkdirp": "0.5.1",
+    "rimraf": "2.6.2"
   }
 }
