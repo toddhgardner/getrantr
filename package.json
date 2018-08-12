@@ -17,10 +17,14 @@
     "url": "https://github.com/toddhgardner/getRANTr/issues"
   },
   "homepage": "https://github.com/toddhgardner/getRANTr#readme",
+  "engines": {
+    "node": "8.11.3"
+  },
   "dependencies": {
     "body-parser": "1.15.2",
     "express": "4.14.0",
-    "nedb": "1.8.0"
+    "nedb": "1.8.0",
+    "node": "8.11.3"
   },
   "devDependencies": {
     "dns": "0.2.2",
