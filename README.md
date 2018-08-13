@@ -10,20 +10,21 @@ getRANTR is a distributed network. This means you download the code and run it y
 
 ### Software Dependencies
 
-getRANTR is built on NodeJS. If you don't have it already, you can download the latest runtime from the [NodeJS website](https://nodejs.org/en/). For best results, we recommend using version **4.6.0 or higher**.
+getRANTR is built on NodeJS. If you don't have it already, you can download the latest runtime from the [NodeJS website](https://nodejs.org/en/).
 
 You may also need the following tools to enhance or debug getRANTR:
 
-- [Atom](https://atom.io/) or another JavaScript-aware text editor
+- [VS Code](https://code.visualstudio.com/) or another JavaScript-aware text editor
 - [Chrome](https://www.google.com/chrome/) web browser
+
+**Optional**
 - [Charles](https://www.charlesproxy.com/) or [Fiddler](http://www.telerik.com/fiddler) web proxy
 
 ### Installation
 
-getRANTR uses [gulp](http://gulpjs.com/) to handle installation and build automation. You'll want to have it installed globally in your **Node** packages. You'll also need to install all the local dependencies, **in the same directory as getRANTR** for running getRANTR:
+You'll need to install all the local dependencies, **in the same directory as getRANTR** for running getRANTR:
 
 ```
-npm install gulp --global
 npm install
 ```
 
