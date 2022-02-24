@@ -1,5 +1,7 @@
 # getRANTR
 
+As used in Todd Gardner's [Frontend Masters Workshop](https://frontendmasters.com/courses/debugging-javascript/).
+
 Social connections are overrated-they only lead to trouble, pain, and lawsuits. Modern social networks have given rise to trolls, fake news, and mansplaining.
 
 Introducing getRANTR, the revolutionary anti-social distributed network. getRANTR gives you all the obsessive status updating of a social network, with non of the misunderstandings and hurt feelings. With getRANTR, no one can see you RANT.
