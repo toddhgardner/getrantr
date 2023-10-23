@@ -1,13 +1,17 @@
 var gulp    = require('gulp');
 var nodemon = require('gulp-nodemon');
-var fs      = require('fs');
+var gulpSass = require('gulp-sass')(require('sass'));
 
-fs.readdirSync('./build/tasks').forEach(function(file) {
-  require('./build/tasks/' + file);
-});
+function sass() {
+  return gulp.src('./src/public/styles/index.scss')
+    .pipe(gulpSass({ outputStyle: 'compressed' }).on('error', gulpSass.logError))
+    .pipe(gulp.dest('./src/public/'));
+}
 
-gulp.task('start', ['build'], function() {
-  nodemon({
+exports.build = sass;
+
+exports.start = gulp.series(exports.build, () => {
+  return nodemon({
     script: 'src/index.js',
     tasks: ['build'],
     ext: 'js html scss',
